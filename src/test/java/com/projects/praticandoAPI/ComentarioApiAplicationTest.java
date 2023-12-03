@@ -30,7 +30,7 @@ public class ComentarioApiAplicationTest {
     	final String expectedMensagem = "Comentario05";
 
         mockMvc
-            .perform(MockMvcRequestBuilders.post("/comentarios").contentType(MediaType.APPLICATION_JSON).content("{\"mensagem\":\"CursoHorrivel\"}"))
+            .perform(MockMvcRequestBuilders.post("/comentarios").contentType(MediaType.APPLICATION_JSON).content("{\"mensagem\":\"Comentario05\"}"))
             .andExpect(MockMvcResultMatchers.status().is(201))
             .andExpect((ResultMatcher) jsonPath("mensagem").value(expectedMensagem));
     }
